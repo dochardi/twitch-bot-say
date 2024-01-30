@@ -1,0 +1,30 @@
+<script>
+function loadJSON(callback,url) {   
+  var xobj = new XMLHttpRequest();
+  xobj.overrideMimeType("application/json");
+  xobj.open('GET', url, true); 
+  xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+          callback(xobj.responseText);
+        }
+  };
+  xobj.send(null);
+}
+function callback1(response){
+        var botNames = JSON.parse(response)
+        var keys = Object.keys(botNames);
+        var randomProperty = keys[Math.floor(keys.length*Math.random())]
+        var botName = botNames[randomProperty]['quote_text']
+        document.write(botName);
+    }
+    
+    const searchParams = new URLSearchParams(window.location.search);
+    function show()
+    {
+    const searchParams = new URLSearchParams(window.location.search);
+    var type = searchParams.get('type')
+    var lang = searchParams.get('lang')
+    loadJSON(callback1,'https://raw.githubusercontent.com/dochardi/twitch-bot-say-api-data/main/' + lang +'/' + type +'.json')
+    }
+</script>
+<body onload="show();">   
