@@ -6,6 +6,7 @@
     var username = searchParams.get('user');
     var url = searchParams.get('url');
     var userfrom = searchParams.get('to');
+    var channel = searchParams.get('channel');
     
 function loadJSON(callback,url) {   
   var xobj = new XMLHttpRequest();
@@ -18,6 +19,8 @@ function loadJSON(callback,url) {
   };
   xobj.send(null);
 }
+
+
 function callback1(response){
         var botNames = JSON.parse(response)
         var keys = Object.keys(botNames);
@@ -26,13 +29,13 @@ function callback1(response){
         var result = botName.replace("[username]", username);
         var result = result.replace("[url]", url);
         var result = result.replace("[userto]", userfrom);
+        var result = result.replace("[channel]", channel);
         document.write(result);
     }
     
     function show()
     {
-
-    loadJSON(callback1,'https://raw.githubusercontent.com/dochardi/twitch-bot-say-api-data/main/de/' + type +'.json')
+    loadJSON(callback1,'https://git.pruskil-it-service.de/twitch-bot-say-api-data/lang/' + lang +'/' + type +'.json')
     }
 </script>
 <body onload="show();">   
