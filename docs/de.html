@@ -18,20 +18,6 @@ function loadJSON(callback,url) {
   };
   xobj.send(null);
 }
-
-
-function loadhtml(url) {   
-  var xobj = new XMLHttpRequest();
-  xobj.overrideMimeType("application/html");
-  xobj.open('GET', url, true); 
-  xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-          document.write(xobj.responseText);
-        }
-  };
-  xobj.send(null);
-}
-
 function callback1(response){
         var botNames = JSON.parse(response)
         var keys = Object.keys(botNames);
@@ -45,13 +31,8 @@ function callback1(response){
     
     function show()
     {
-    if (searchParams.has('type')){
-    loadJSON(callback1,'https://raw.githubusercontent.com/dochardi/twitch-bot-say-api-data/main/' + lang +'/' + type +'.json')
-     }
-     else
-     {
-        loadhtml("http://git.pruskil-it-service.de/twitch-bot-say/show.html");
-     }
+
+    loadJSON(callback1,'https://raw.githubusercontent.com/dochardi/twitch-bot-say-api-data/main/de/' + type +'.json')
     }
 </script>
 <body onload="show();">   
