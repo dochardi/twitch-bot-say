@@ -37,7 +37,7 @@ curl -X GET "https://git.pruskil-it-service.de/twitch-bot-say/?type=cheater&lang
 
 | Command | How to Use | Language | Reply |
 | ------- | ---------- | -------- | ----- |
-| !cheater | Specify the category of the quote. | "de|en|fr" | Cheater denken, sie sind schlau, doch am Ende sind sie nur selbstgetäuscht. |
+| !cheater | Specify the category of the quote. | de or en or fr | Cheater denken, sie sind schlau, doch am Ende sind sie nur selbstgetäuscht. |
 
 ## Contributing
 
