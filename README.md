@@ -9,22 +9,20 @@ This API allows you to retrieve random text quotes from predefined categories st
 ## API Endpoint
 
 ```plaintext
-https://git.pruskil-it-service.de/twitch-bot-say/?type=<CATEGORY>&lang=<LANGUAGE>&user=<USERNAME>&url=<URL>&channel=<CHANNEL>&to=<username>
+https://free-app.pruskil-it-service.de/bot/<lang>/<type>/?sendfrom=username&url=http://example.com&streamer=channelname&userto=<username>
 ```
 
 ### Parameters
 
-- `type`: Specify the category of the quote.
-- `lang`: Define the language of the quote.
-- `user`: Provide the Twitch username if needed.
-- `to`: Provide the Twitch to username if needed.
+- `sendfrom`: Provide the Twitch username if needed.
+- `userto`: Provide the Twitch to username if needed.
 - `url`: Include a URL if needed.
-- `channel`: Specify the Twitch channel name if needed.
+- `streamer`: Specify the Twitch channel name if needed.
 
 ## Example Request
 
 ```bash
-curl -X GET "https://git.pruskil-it-service.de/twitch-bot-say/?type=cheater&lang=de&user=username&url=http://example.com&channel=channelname&to=<username>"
+curl -X GET "https://free-app.pruskil-it-service.de/bot/de/cheater/?sendfrom=username&url=http://example.com&streamer=channelname&userto=<username>"
 ```
 
 ## JSON Response
