@@ -1,5 +1,7 @@
 # Twitch Bot say API - Random Text Selector
 
+[![](https://dcbadge.vercel.app/api/server/HybJgdKmYq)](https://discord.gg/HybJgdKmYq)   [![](https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=whit)](https://twitch.tv/doc_hardi)
+
 ## Overview
 
 This API allows you to retrieve random text quotes from predefined categories stored in JSON files. It's designed for integration with Twitch chat interactions.
